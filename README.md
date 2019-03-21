@@ -34,8 +34,8 @@ $ git clone https://github.com/PeterEJensen/CourseRater
 ```
 
 ## Built With
-Java
-Android studio
+- Java
+- Android studio
 
 
 
