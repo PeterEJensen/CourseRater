@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="teachers">
+        <item>ANDC</item>
+        <item>AMRI</item>
+        <item>ASBC</item>
+        <item>CAHL</item>
+        <item>CHRK</item>
+        <item>CLBO</item>
+        <item>COAG</item>
+        <item>DANP</item>
+        <item>DAKA</item>
+        <item>DE</item>
+        <item>DOB</item>
+        <item>FAFJ</item>
+        <item>HAAM</item>
+        <item>HSTR</item>
+        <item>JAHB</item>
+        <item>JANP</item>
+        <item>JART</item>
+        <item>JESN</item>
+        <item>JONE</item>
+        <item>KRM</item>
+        <item>LORR</item>
+        <item>MN</item>
+        <item>MORC</item>
+        <item>OSTU</item>
+        <item>ANDL</item>
+        <item>SAND</item>
+        <item>STAL</item>
+        <item>DODI</item>
+        <item>TOMS</item>
+    </string-array>
+
+    <string-array name="subjects">
+        <item>Android app</item>
+        <item>Android game</item>
+        <item>IOS</item>
+        <item>SWC 1</item>
+        <item>SWC 2</item>
+        <item>SWC 3</item>
+        <item>Tech 1</item>
+        <item>Tech 2</item>
+        <item>SWD 1</item>
+        <item>SWD 2</item>
+        <item>SWD 3</item>
+        <item>ITO 1</item>
+        <item>ITO 2</item>
+    </string-array>
+
+</resources>
+

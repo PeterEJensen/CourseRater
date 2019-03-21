@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Course Rating</string>
+    <string name="review">Review rating before accepting</string>
+    <string name="intials">Teacher initials:</string>
+    <string name="subject">Subject name:</string>
+    <string name="relevans">Subject relevans:</string>
+    <string name="performance">Overall performance:</string>
+    <string name="preparation">Teacher preparation:</string>
+    <string name="avscore">AVERAGE SCORE:</string>
+    <string name="ok">submit</string>
+    <string name="reset">reset</string>
+
+    <string name="helpText">Please rate the following from 1–100:</string>
+    <string name="introtext">Rate your teacher!</string>
+    <string name="rekt">GET A NEW JOB</string>
+
+
+
+</resources>
