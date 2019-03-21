@@ -6,22 +6,36 @@ Small app for rating courses & teacher. Done for a small project for android dev
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This sample uses the Gradle build system. To build this project, use the "gradlew build" command or use "Import Project" in Android Studio.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+- Android SDK 28
+- Android Build Tools v27.0.3
+- Android Support Repository
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+# To deploy this project to an emulator please do the following:
+1. Download zip folder from this github
+2. unzip project and "import project" in android studio
+3. Setup an AVD to emulate a phone
+4. Click "run" and select the emulator
+
+# To run this on a physical device please do the following:
+1. Download zip folder from this github
+2. unzip project and "import project" in android studio
+3. Plug in a compatible phone cable to your PC's USB and into your compatible android phone
+4. Click "run" and select the phone
+
+## Clone
+```
+$ git clone https://github.com/PeterEJensen/CourseRater
+```
 
 ## Built With
+Java
+Android studio
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
 
 
