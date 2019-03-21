@@ -16,13 +16,13 @@ This sample uses the Gradle build system. To build this project, use the "gradle
 
 ## Deployment
 
-# To deploy this project to an emulator please do the following:
+### To deploy this project to an emulator please do the following:
 1. Download zip folder from this github
 2. unzip project and "import project" in android studio
 3. Setup an AVD to emulate a phone
 4. Click "run" and select the emulator
 
-# To run this on a physical device please do the following:
+### To run this on a physical device please do the following:
 1. Download zip folder from this github
 2. unzip project and "import project" in android studio
 3. Plug in a compatible phone cable to your PC's USB and into your compatible android phone
