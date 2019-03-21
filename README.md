@@ -1,3 +1,5 @@
+<a href=""><img src="https://i.imgur.com/ioNyBNr.png"></a>
+
 # CourseRater
 
 Small app for rating courses & teacher. Done for a small project for android dev. at KEA
