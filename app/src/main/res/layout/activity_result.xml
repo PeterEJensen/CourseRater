@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="cursive"
+        android:fontFamily="sans-serif"
         android:text="@string/review"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
@@ -194,14 +194,28 @@
         android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="307dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/ok"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

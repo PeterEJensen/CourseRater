@@ -10,7 +10,7 @@
     <string name="ok">submit</string>
     <string name="reset">reset</string>
 
-    <string name="helpText">Rate the following from 1–100:</string>
+    <string name="helpText">Rate the following from 1–100</string>
     <string name="introtext">Please select teacher and subject</string>
     <string name="rekt">GET A NEW JOB</string>
     <string name="rateteacherimg">Picture for rating teacher</string>

@@ -108,6 +108,7 @@ public class ResultActivity extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         submit = findViewById(R.id.buttonSubmit);
 
+
     }
 
 }

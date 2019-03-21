@@ -1,6 +1,8 @@
 package test.com.courserating;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import guy4444.smartrate.SmartRate;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TEACHER = "stud";
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button b1, b2;
     private EditText et3, et4, et5, et6;
     private Spinner teacher, subject;
+    private FloatingActionButton fab;
 
 
     @Override
@@ -41,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -62,12 +69,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     et5.setError("Felt mangler");
                     et5.requestFocus();
                 }
-
-
                 break;
+
             case R.id.b2:
                 Log.d(TAG, "B2: onClick: called");
                 clearEditTexts();
+                break;
+
+            case R.id.fab:
+                Log.d(TAG, "FAB clicked");
+                SmartRate.Rate(MainActivity.this
+                        , "Rate Us"
+                        , "Tell others what you think about this app"
+                        , "Continue"
+                        , "Please take a moment and rate us on Google Play"
+                        , ""
+                        , "Cancel"
+                        , "Thanks for the feedback"
+                        , Color.parseColor("#2196F3")
+                        , 4
+
+                );
                 break;
 
         }      //Log.i(TAG, "Send: " + teacher);
@@ -78,15 +100,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TeacherRating teach = new TeacherRating();
         teach.setInitials(teacher.getSelectedItem().toString());
         teach.setSubject(subject.getSelectedItem().toString());
-
         teach.setRelevans(et3.getText().toString());
-
         teach.setPerformance(et4.getText().toString());
-
-
         teach.setPreparation(et5.getText().toString());
-
-
         return teach;
 
 
@@ -100,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b1.setOnClickListener(this);
         b2 = findViewById(R.id.b2);
         b2.setOnClickListener(this);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(this);
 
 
         teacher = findViewById(R.id.spinnerTeacher);
@@ -108,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et4 = findViewById(R.id.et4);
         et5 = findViewById(R.id.et5);
         et6 = findViewById(R.id.et6);
+
 
 
         et3.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
