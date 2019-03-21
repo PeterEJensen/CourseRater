@@ -1,4 +1,4 @@
-<a href=""><img src="https://ratemyprofessors.cc/wp-content/uploads/2018/07/maxresdefault-300x169.jpg></a>
+<a href=""><img src="https://ratemyprofessors.cc/wp-content/uploads/2018/07/maxresdefault-300x169.jpg"></a>
 
 # CourseRater
 
