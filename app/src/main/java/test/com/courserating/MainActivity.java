@@ -46,12 +46,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.b1:
                 Log.d(TAG, "B1: onClick: called");
-                TeacherRating teacher = createTeacherFromView();
-                Log.i(TAG, "Send: " + teacher);
+                if (et3.getText().length() > 0 && et4.getText().length() > 0 && et5.getText().length() > 0) {
+                    TeacherRating teacher = createTeacherFromView();
+                    Intent intent = new Intent(this, ResultActivity.class);
+                    intent.putExtra(TEACHER, teacher);
+                    startActivity(intent);
 
-                Intent intent = new Intent(this, ResultActivity.class);
-                intent.putExtra(TEACHER, teacher);
-                startActivity(intent);
+                } else if (et3.getText().length() == 0) {
+                    et3.setError("Felt mangler");
+                    et3.requestFocus();
+                } else if (et4.getText().length() == 0) {
+                    et4.setError("Felt mangler");
+                    et4.requestFocus();
+                } else if (et5.getText().length() == 0) {
+                    et5.setError("Felt mangler");
+                    et5.requestFocus();
+                }
+
 
                 break;
             case R.id.b2:
@@ -59,18 +70,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 clearEditTexts();
                 break;
 
-        }
+        }      //Log.i(TAG, "Send: " + teacher);
     }
 
     private TeacherRating createTeacherFromView() {
-        TeacherRating stud = new TeacherRating();
-        stud.setInitials(teacher.getSelectedItem().toString());
-        stud.setSubject(subject.getSelectedItem().toString());
-        stud.setRelevans(et3.getText().toString());
-        stud.setPerformance(et4.getText().toString());
-        stud.setPreparation(et5.getText().toString());
 
-        return stud;
+        TeacherRating teach = new TeacherRating();
+        teach.setInitials(teacher.getSelectedItem().toString());
+        teach.setSubject(subject.getSelectedItem().toString());
+
+        teach.setRelevans(et3.getText().toString());
+
+        teach.setPerformance(et4.getText().toString());
+
+
+        teach.setPreparation(et5.getText().toString());
+
+
+        return teach;
+
+
     }
 
 
