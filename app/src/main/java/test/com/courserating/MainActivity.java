@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import guy4444.smartrate.SmartRate;
 
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText et3, et4, et5, et6;
     private Spinner teacher, subject;
     private FloatingActionButton fab;
+    private TextView textview4;
 
 
     @Override
@@ -44,6 +47,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "spinner adapters init succesfully");
 
 
+
+        teacher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if(!teacher.getSelectedItem().equals("Select teacher"))
+                {
+                    subject.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        subject.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if(!subject.getSelectedItem().equals("Select subject"))
+                {
+                    et3.setVisibility(View.VISIBLE);
+                    et4.setVisibility(View.VISIBLE);
+                    et5.setVisibility(View.VISIBLE);
+                    textview4.setVisibility(View.VISIBLE);
+                    b1.setVisibility(View.VISIBLE);
+                    b2.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+
+
     }
 
 
@@ -60,13 +102,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(intent);
 
                 } else if (et3.getText().length() == 0) {
-                    et3.setError("Felt mangler");
+                    et3.setError("Cannot be blank");
                     et3.requestFocus();
                 } else if (et4.getText().length() == 0) {
-                    et4.setError("Felt mangler");
+                    et4.setError("Cannot be blank");
                     et4.requestFocus();
                 } else if (et5.getText().length() == 0) {
-                    et5.setError("Felt mangler");
+                    et5.setError("Cannot be blank");
                     et5.requestFocus();
                 }
                 break;
@@ -109,6 +151,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+
+
     private void init() {
         Log.d(TAG, "init called");
 
@@ -126,6 +170,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et4 = findViewById(R.id.et4);
         et5 = findViewById(R.id.et5);
         et6 = findViewById(R.id.et6);
+        textview4 = findViewById(R.id.textView4);
 
 
 
@@ -133,6 +178,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et4.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
         et5.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
         et6.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
+
+        et3.setVisibility(View.INVISIBLE);
+        et4.setVisibility(View.INVISIBLE);
+        et5.setVisibility(View.INVISIBLE);
+        textview4.setVisibility(View.INVISIBLE);
+        b1.setVisibility(View.INVISIBLE);
+        b2.setVisibility(View.INVISIBLE);
+        subject.setVisibility(View.INVISIBLE);
 
     }
 
