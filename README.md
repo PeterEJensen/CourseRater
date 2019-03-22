@@ -28,6 +28,11 @@ This sample uses the Gradle build system. To build this project, use the "gradle
 3. Plug in a compatible phone cable to your PC's USB and into your compatible android phone
 4. Click "run" and select the phone
 
+### Alternatively you can generate APK and install it:
+1. In android studio press Build -> Build bundle(s) & APK(s) -> Build APK(s)
+2. Transfer the APK to your phone by cable or by uploading (Dropbox, google drive etc.)
+3. Locate APK on the physical device, press it and select install
+
 ## Clone
 ```
 $ git clone https://github.com/PeterEJensen/CourseRater
