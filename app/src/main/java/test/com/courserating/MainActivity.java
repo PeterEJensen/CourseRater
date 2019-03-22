@@ -47,13 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "spinner adapters init succesfully");
 
 
-
         teacher.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(!teacher.getSelectedItem().equals("Select teacher"))
-                {
+                if (!teacher.getSelectedItem().equals("Select teacher")) {
                     subject.setVisibility(View.VISIBLE);
+                } else {
+                    hideUI();
+                    subject.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -66,14 +67,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         subject.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(!subject.getSelectedItem().equals("Select subject"))
-                {
-                    et3.setVisibility(View.VISIBLE);
-                    et4.setVisibility(View.VISIBLE);
-                    et5.setVisibility(View.VISIBLE);
-                    textview4.setVisibility(View.VISIBLE);
-                    b1.setVisibility(View.VISIBLE);
-                    b2.setVisibility(View.VISIBLE);
+                if (!subject.getSelectedItem().equals("Select subject")) {
+                    showUI();
+                } else {
+                    hideUI();
+
                 }
             }
 
@@ -84,10 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-
-
     }
-
 
 
     @Override
@@ -151,8 +146,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-
     private void init() {
         Log.d(TAG, "init called");
 
@@ -169,23 +162,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et3 = findViewById(R.id.et3);
         et4 = findViewById(R.id.et4);
         et5 = findViewById(R.id.et5);
-        et6 = findViewById(R.id.et6);
+        //  et6 = findViewById(R.id.et6);
         textview4 = findViewById(R.id.textView4);
-
 
 
         et3.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
         et4.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
         et5.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
-        et6.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
+        //  et6.setFilters(new InputFilter[]{new MinMaxFilter("1", "100")});
 
-        et3.setVisibility(View.INVISIBLE);
-        et4.setVisibility(View.INVISIBLE);
-        et5.setVisibility(View.INVISIBLE);
-        textview4.setVisibility(View.INVISIBLE);
-        b1.setVisibility(View.INVISIBLE);
-        b2.setVisibility(View.INVISIBLE);
-        subject.setVisibility(View.INVISIBLE);
 
     }
 
@@ -193,7 +178,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et3.setText("");
         et4.setText("");
         et5.setText("");
-        et6.setText("");
+        teacher.setSelection(0);
+        subject.setSelection(0);
+        //et6.setText("");
+    }
+
+    private void hideUI() {
+        et3.setVisibility(View.INVISIBLE);
+        et4.setVisibility(View.INVISIBLE);
+        et5.setVisibility(View.INVISIBLE);
+        textview4.setVisibility(View.INVISIBLE);
+        b1.setVisibility(View.INVISIBLE);
+        b2.setVisibility(View.INVISIBLE);
+        fab.setVisibility(View.INVISIBLE);
+    }
+
+    private void showUI() {
+        et3.setVisibility(View.VISIBLE);
+        et4.setVisibility(View.VISIBLE);
+        et5.setVisibility(View.VISIBLE);
+        textview4.setVisibility(View.VISIBLE);
+        b1.setVisibility(View.VISIBLE);
+        b2.setVisibility(View.VISIBLE);
+        fab.setVisibility(View.VISIBLE);
     }
 
 }

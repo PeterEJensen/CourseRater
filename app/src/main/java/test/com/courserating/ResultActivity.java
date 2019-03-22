@@ -32,10 +32,12 @@ public class ResultActivity extends AppCompatActivity {
 
         setStudDataInView(stud);
 
+        //get the numbers from previous intent
         int x = Integer.parseInt(stud.getSubjectRelevans());
         int y = Integer.parseInt(stud.getPerformance());
         int z = Integer.parseInt(stud.getPreparation());
 
+        //add all the numbers and divide by amount
         final int total = (x + y + z) / 3;
 
         tvScore.setText(Integer.toString(total));

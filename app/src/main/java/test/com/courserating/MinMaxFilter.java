@@ -7,6 +7,7 @@ public class MinMaxFilter implements InputFilter {
 
     private int mIntMin, mIntMax;
 
+    //unused as we use tostring
     public MinMaxFilter(int minValue, int maxValue) {
         this.mIntMin = minValue;
         this.mIntMax = maxValue;
@@ -23,7 +24,8 @@ public class MinMaxFilter implements InputFilter {
             int input = Integer.parseInt(dest.toString() + source.toString());
             if (isInRange(mIntMin, mIntMax, input))
                 return null;
-        } catch (NumberFormatException nfe) { }
+        } catch (NumberFormatException nfe) {
+        }
         return "";
     }
 
