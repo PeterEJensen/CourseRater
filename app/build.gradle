@@ -32,6 +32,6 @@ dependencies {
     implementation 'com.github.guy-4444:SmartRateUsDialog-Android:1.00.03'
     implementation 'com.github.AkashBang:Engorgio-Bottom-Bar:0.1.1'
     implementation 'com.android.support:design:27.1.1'
-
+    implementation 'com.github.AkashBang:Engorgio-Bottom-Bar:0.1.1'
 
 }

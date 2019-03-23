@@ -23,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/mm"
         android:text="@string/review"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/skv_black"
         android:textSize="24sp"
         android:typeface="sans"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -66,9 +66,9 @@
 
     <TextView
         android:id="@+id/tv3"
-        android:layout_width="wrap_content"
+        android:layout_width="16dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="48dp"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView16"
@@ -111,7 +111,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="24dp"
         android:text="@string/intials"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -123,7 +123,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:text="@string/subject"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -135,7 +135,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="49dp"
         android:text="@string/relevans"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv2" />
@@ -147,7 +147,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:text="@string/performance"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -159,7 +159,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
         android:text="@string/preparation"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -171,7 +171,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="64dp"
         android:text="@string/avscore"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/skv_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -180,32 +180,33 @@
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
+        android:layout_marginStart="472dp"
         android:layout_marginTop="101dp"
-        android:layout_marginEnd="86dp"
+        android:layout_marginEnd="19dp"
         android:layout_marginBottom="175dp"
         android:isIndicator="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.865" />
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="307dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:text="@string/ok"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.534" />
 
 </android.support.constraint.ConstraintLayout>

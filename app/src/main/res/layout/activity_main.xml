@@ -6,16 +6,62 @@
     android:layout_height="match_parent">
 
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/bgheader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="344dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bgmenus"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2">
+
+        <Spinner
+            android:id="@+id/spinnerTeacher"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="30dp"
+            android:elevation="0dp"
+            android:spinnerMode="dropdown"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="165dp" />
+
+        <Spinner
+            android:id="@+id/spinnerSubject"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            android:layout_width="209dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
+            android:spinnerMode="dropdown"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="215dp" />
+    </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="169dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="48dp"
         android:src="@drawable/ic_star_active"
-        app:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -24,13 +70,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="51dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/relevans"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerSubject" />
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/et4"
@@ -75,47 +121,27 @@
     <Button
         android:id="@+id/b1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorPrimaryDark"
         android:text="@string/ok"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/et5" />
 
     <Button
         android:id="@+id/b2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/white"
         android:elevation="0dp"
         android:text="@string/reset"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toStartOf="@+id/b1"
         app:layout_constraintTop_toBottomOf="@+id/et5" />
-
-    <Spinner
-        android:id="@+id/spinnerTeacher"
-        android:layout_width="209dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="19dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Spinner
-        android:id="@+id/spinnerSubject"
-        android:layout_width="209dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerTeacher" />
 
 
     <TextView
@@ -123,35 +149,58 @@
         android:layout_width="359dp"
         android:layout_height="36dp"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="177dp"
         android:layout_marginEnd="26dp"
-        android:layout_marginBottom="14dp"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/mm"
         android:text="@string/helpText"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/skv_black"
         android:textSize="24sp"
         android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/et3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerSubject"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="19dp"
-        android:contentDescription="@string/rateteacherimg"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerTeacher"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/mm"
+        android:text="Rate"
+        android:textColor="@color/skv_white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rateteacher" />
+        tools:text="Rate" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/mm"
+        android:text="My"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        tools:text="My" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/mm"
+        android:text="Teacher"
+        android:textColor="@color/skv_white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Teacher" />
+
 
 </android.support.constraint.ConstraintLayout>
