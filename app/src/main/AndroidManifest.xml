@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="test.com.courserating.ResultActivity"
-            android:theme="@style/AppTheme.NoActionBar">></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name="test.com.courserating.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 

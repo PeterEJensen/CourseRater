@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Spinner teacher, subject;
     private FloatingActionButton fab;
     private TextView textview4;
+    Animation atg;
 
 
     @Override
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "onCreate() called");
         setContentView(R.layout.activity_main);
 
+        atg = AnimationUtils.loadAnimation(this, R.anim.atg);
         init();
 
 
@@ -52,9 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (!teacher.getSelectedItem().equals("Select teacher")) {
                     subject.setVisibility(View.VISIBLE);
+                    subject.startAnimation(atg);
                 } else {
                     hideUI();
                     subject.setVisibility(View.INVISIBLE);
+
                 }
             }
 
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (!subject.getSelectedItem().equals("Select subject")) {
                     showUI();
+                    animateUI();
                 } else {
                     hideUI();
 
@@ -123,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         , ""
                         , "Cancel"
                         , "Thanks for the feedback"
-                        , Color.parseColor("#2196F3")
+                        , Color.parseColor("#44E6C6")
                         , 4
 
                 );
@@ -201,6 +208,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b1.setVisibility(View.VISIBLE);
         b2.setVisibility(View.VISIBLE);
         fab.setVisibility(View.VISIBLE);
+    }
+
+    private void animateUI() {
+        et3.startAnimation(atg);
+        et4.startAnimation(atg);
+        et5.startAnimation(atg);
+        textview4.startAnimation(atg);
+        b1.startAnimation(atg);
+        b2.startAnimation(atg);
+        fab.startAnimation(atg);
     }
 
 }
