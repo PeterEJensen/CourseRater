@@ -2,6 +2,7 @@ package test.com.courserating;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate() called");
         setContentView(R.layout.activity_main);
+
 
         atg = AnimationUtils.loadAnimation(this, R.anim.atg);
         init();
@@ -138,6 +140,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }      //Log.i(TAG, "Send: " + teacher);
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+
 
     private TeacherRating createTeacherFromView() {
 
