@@ -1,6 +1,7 @@
 package test.com.courserating;
 
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -87,7 +88,7 @@ public class ResultActivity extends AppCompatActivity {
                 email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(htmlContent, 1));
                 try {
                     startActivity(Intent.createChooser(email, "Choose an email client from..."));
-                }catch (android.content.ActivityNotFoundException ex) {
+                }catch (ActivityNotFoundException ex) {
                     Toast.makeText(ResultActivity.this, "No mail client found", Toast.LENGTH_SHORT).show();
                 }
             }
