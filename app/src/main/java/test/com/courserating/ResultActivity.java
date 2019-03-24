@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -84,7 +85,11 @@ public class ResultActivity extends AppCompatActivity {
                         "<h3>/KEA Administration</h3>";
 
                 email.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(htmlContent, 1));
-                startActivity(Intent.createChooser(email, "Choose an email client from..."));
+                try {
+                    startActivity(Intent.createChooser(email, "Choose an email client from..."));
+                }catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(ResultActivity.this, "No mail client found", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
